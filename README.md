@@ -1,4 +1,4 @@
-# web-crawling
+# Sentiment Classification
 
 # 리뷰 감정 분석기 & 워드클라우드 생성기
 
