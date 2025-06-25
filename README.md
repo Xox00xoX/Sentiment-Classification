@@ -16,37 +16,31 @@
 
 ---
 
-
-## 시스템 구성도
-
-`plots/system_chart.png` 
-
----
-
 ## 📁 프로젝트 구조
 
-web-crawling/
-├── data/ # 크롤링 및 전처리된 리뷰 데이터
-│ ├── cleaned_reviews.csv # 2차 전처리 데이터
-│ ├── cleaned_reviews_strong.csv # 3차 전처리 데이터
-│ └── labeled_reviews_lmstudio_cleaned.csv # 1차 전처리 데이터
-│
-├── models/ # 학습된 감정 분석 모델
-│ ├── koelectra_sentiment_model_tf_updated/ # 2차 데이터 커리큘럼 구성 후 모델
-│ └── koelectra_sentiment_model_tf/ # 1차 모델
-│
-├── plots/ # 학습 시각화 이미지
-│ ├── confusion_matrix.png
-│ ├── accuracy_plot.png
-│ ├── loss_plot.png
-│ └── model_progress.png
-│
-├── train_sentiment_model.py # BiLSTM 모델 학습 코드
-├── train_koelectra_sentiment.py # KoELECTRA 모델 학습 코드
-├── review.py # 전처리 및 리뷰 처리 모듈
-├── save.py # 모델 저장 유틸리티
-├── requirements.txt # 실행 환경 패키지 목록
-└── README.md
+![프로젝트 구조 이미지](./plots/system_chart.png)
+
+| 폴더/파일명                        | 설명                                         |
+|------------------------------------|----------------------------------------------|
+| `data/`                            | 크롤링 및 전처리된 리뷰 데이터 폴더         |
+| ├── `cleaned_reviews.csv`         | 2차 전처리 데이터                            |
+| ├── `cleaned_reviews_strong.csv`  | 감정 강도 높은 리뷰만 추린 3차 전처리 데이터 |
+| └── `labeled_reviews_lmstudio_cleaned.csv` | 수작업 라벨링된 1차 전처리 데이터     |
+| `models/`                          | 학습된 감정 분석 모델 폴더                  |
+| ├── `koelectra_sentiment_model_tf_updated/` | 커리큘럼 구성 후 훈련된 KoELECTRA 모델 |
+| └── `koelectra_sentiment_model_tf/` | 1차 KoELECTRA 모델                        |
+| `plots/`                           | 학습 결과 시각화 이미지                     |
+| ├── `confusion_matrix.png`        | 혼동 행렬 이미지                            |
+| ├── `accuracy_plot.png`           | 정확도 변화 시각화                          |
+| ├── `loss_plot.png`               | 손실값 변화 시각화                          |
+| └── `model_progress.png`          | 모델 성능 개선 과정 종합 시각화             |
+| `train_sentiment_model.py`        | BiLSTM 모델 학습 코드                        |
+| `train_koelectra_sentiment.py`    | KoELECTRA 모델 학습 코드                    |
+| `review.py`                        | 전처리 및 리뷰 처리용 모듈                  |
+| `save.py`                          | 모델 저장 유틸리티                          |
+| `requirements.txt`                | 실행 환경 패키지 목록                        |
+| `README.md`                        | 프로젝트 설명 파일                           |
+
 ---
 
 ## 🧾 사용한 기술 스택
@@ -101,9 +95,9 @@ web-crawling/
 
 ### 2. 시각화 자료
 
-- 📊 혼동 행렬: `plots/confusion_matrix.png`  
-- 📈 정확도 변화: `plots/accuracy_plot.png`  
-- 📉 손실 변화: `plots/loss_plot.png`  
+- 📊 혼동 행렬: ![혼동 행렬 이미지](./plots/confusion_matrix.png)
+- 🧮 정밀도-재현율 곡선: ![정밀도-재현율 곡선 이미지](./plots/precision_recall_curve.png) 
+- 🧾 클래스별 Precision / Recall / F1-score: ![정밀도-재현율 곡선 이미지](./plots/precision-recall-f-score.png) 
 
 ---
 
