@@ -1,0 +1,5 @@
+tensorflow>=2.11
+transformers==4.39.3
+pandas
+numpy
+scikit-learn
