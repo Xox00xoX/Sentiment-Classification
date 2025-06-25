@@ -178,4 +178,4 @@ print("감정 예측 결과:", label)  # 0=부정, 1=중립, 2=긍정
 본 리포지토리는 모델 학습 및 평가에 초점을 두고 있으며,
 웹 기반 감정 분석 서비스는 아래 리포지토리에서 확인할 수 있습니다:
 
-👉 [web-crawling-service](https://github.com/Xox00xoX/web-crawling-service)
+👉 [web-crawling-service](https://github.com/Xox00xoX/Sentiment-Classification-Service)
