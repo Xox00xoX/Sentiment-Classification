@@ -31,8 +31,10 @@
 | └── `koelectra_sentiment_model_tf/` | 1차 KoELECTRA 모델                        |
 | `plots/`                           | 학습 결과 시각화 이미지                     |
 | ├── `confusion_matrix.png`        | 혼동 행렬 이미지                            |
-| ├── `accuracy_plot.png`           | 정확도 변화 시각화                          |
-| ├── `loss_plot.png`               | 손실값 변화 시각화                          |
+| ├── `precision_recall_curve.png`   | 정밀도-재현율(PR) 곡선                     |
+| ├── `system_chart.png`           | 시스템 구조도  |
+| ├── `data_chart.png`           | 대용량 → 수작업 라벨링 → 학습 데이터 흐름도  |
+| ├── `precision-recall-f-score.png`| 손실값 변화 시각화                          |
 | └── `model_progress.png`          | 모델 성능 개선 과정 종합 시각화             |
 | `train_sentiment_model.py`        | BiLSTM 모델 학습 코드                        |
 | `train_koelectra_sentiment.py`    | KoELECTRA 모델 학습 코드                    |
